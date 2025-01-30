@@ -14,8 +14,8 @@ EDA on AirBnB data
     - [Configurando ambiente](#configurando-ambiente)
       - [Instalando Python](#instalando-python)
       - [Criando .venv](#criando-venv)
-      - [Activating `.venv`](#activating-venv-1)
-      - [Installing packages](#installing-packages-1)
+      - [Ativando o `.venv`](#ativando-o-venv)
+      - [Instalando pacotes](#instalando-pacotes)
     - [Estrutura do projeto](#estrutura-do-projeto)
 
 ## English
@@ -79,7 +79,7 @@ Com o python instalado na sua máquina, baixe os arquivos desse repositório, e 
 python3 -m venv ./.venv
 ```
 
-#### Activating `.venv`
+#### Ativando o `.venv`
 
 Uma vez que o `.venv` foi criado, é necessário ativa-lo. Para tal, use o seguinte comando no mesmo terminal usado para criar o `.venv`
 
@@ -87,7 +87,7 @@ Uma vez que o `.venv` foi criado, é necessário ativa-lo. Para tal, use o segui
 source .venv/bin/activate
 ```
 
-#### Installing packages
+#### Instalando pacotes
 
 Finalmente, para a instalação dos pacotes necessários, rode a seguinte linha no mesmo terminal:
 
