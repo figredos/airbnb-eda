@@ -59,9 +59,10 @@ In the repository you can find 4 main folders:
 - [dataset](./dataset/): Folder that contains the data used in the project and the data dictionary for the [listings.csv](./dataset/listings.csv) file.
 - [models](./models/): Folder that contains the saved model, used to predict the price for each entry in the datasets
 - [notebooks](./notebooks/): Folder that contains the notebooks used for the EDA and the modelling.
+  - There are two modeling files, the actual model used is from the [improved_model](./notebooks/improved_model.ipynb)file.
 - [report](./report/): Folder that contains the reports for the findings of the EDA and modelling.
 
-The other important file in this structure, is the [resposta.pdf](./resposta.pdf), that holds a summary of all the questions asked for the recruitment process.
+The other important file in this structure, is the [respostas.md](./respostas.md), that holds a summary of all the questions asked for the recruitment process.
 
 ## Portuguese
 
