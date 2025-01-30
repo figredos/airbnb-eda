@@ -107,4 +107,4 @@ No repositório são encontradas 4 pastas:
   - Possui dois arquivos de modelagem, o modelo é proveniente do arquivo [improved_model](./notebooks/improved_model.ipynb).
 - [report](./report/): Pasta que contém os relatórios provenientes da EDA e da modelagem.
 
-O outro arquivo importante é o [resposta.pdf](./resposta.pdf), que contém um sumário de todas as perguntas do processo seletivo.
+O outro arquivo importante é o [resposta.md](./resposta.md), que contém um sumário de todas as perguntas do processo seletivo.
