@@ -1,7 +1,5 @@
 # Relatório Análise exploratória Aplicativo de aluguel temporário
 
-Esse relatório visa ressaltar os achados, e explicar a utilização de ferramentas usadas durante a análise exploratória dos dados do Airbnb de 2019. Além disso, também serão testadas algumas hipóteses de negócio em cima dos dados.
-
 - [Relatório Análise exploratória Aplicativo de aluguel temporário](#relatório-análise-exploratória-aplicativo-de-aluguel-temporário)
   - [Objetivos](#objetivos)
   - [Overview dos dados](#overview-dos-dados)
@@ -57,7 +55,7 @@ df.shape
 ```
 
 ```
-output: df.info()
+(48894, 16)
 ```
 
 As colunas de features e suas definições são as seguintes:
@@ -163,16 +161,16 @@ Algumas informações relevantes são, por exemplo a existência de dados com pr
 
 ### Análise de colunas categóricas
 
-Contagem de dados nas tabelas categoricas, número de dados únicos, e quantidade dos valores dentro das tabelas.
+Contagem de dados nas tabelas categoricas, número de dados únicos, e quantidade dos valores dentro das colunas.
 
 ```python
-categoricos = df[['bairro_group', 'room_type', 'bairro']]
+categorical = df[['bairro_group', 'room_type', 'bairro']]
 ```
 
 - Número total de dados
 
 ```python
-categoricos.nunique()
+categorical.nunique()
 ```
 
 ```
@@ -468,7 +466,7 @@ A conclusão que chegamos, é que o segundo bimestre do ano, tende a possuir uma
 
 ### 6. A localização afeta diretamente o preço?
 
-A localização do imóvel ser determinante para seu preço é algo muito lógico a se pensar, portanto se prova uma análise simples mas necessária. Para tal análise, foram escolhidas medidas de média
+A localização do imóvel ser determinante para seu preço é algo muito lógico a se pensar, portanto se prova uma análise simples mas necessária. Para tal análise, foram escolhidas medidas de distribuição
 
 ```python
 df.groupby('bairro_group')['price'].agg(
@@ -549,7 +547,7 @@ word_df = pd.DataFrame(
 word_df.sort_values(by='count', ascending=False, inplace=True)
 ```
 
-O código acima faz a transformação dos dados, primeiramente tornando todas as letras do anuncio minúsculas, em seguida iterando sobre as palavras individualmente, adicionando a um dicionário `names_dict` apenas as palavras que não estão presentes ainda. Caso as palavras estiverem no dicionário, um contador é incrementado. Além de manter o contador, também são registrados os valores de aluguel de imoveis que contém dada palavra. O algoritmo não é o mais eficiente com complexidade $O(N \times M)$.
+O código acima faz a transformação dos dados, primeiramente tornando todas as letras do anuncio minúsculas, em seguida iterando sobre as palavras individualmente, adicionando as um dicionário `names_dict` apenas as palavras que não estão presentes ainda. Caso as palavras estiverem no dicionário, um contador é incrementado. Além de manter o contador, também são registrados os valores de aluguel de imoveis que contém dada palavra. O algoritmo não é o mais eficiente com complexidade $O(N \times M)$.
 
 ```python
 most_common_words = word_df[:25].copy()
